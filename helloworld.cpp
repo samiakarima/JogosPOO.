@@ -1,5 +1,5 @@
 //Meu primeiro código em C++.
-//Acessando biblioteca "<iostream>"
+//Incluindo biblioteca "<iostream>".
 #include <iostream>
 using namespace std;
 
