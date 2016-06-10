@@ -6,6 +6,7 @@
 #include <ctime>
 using namespace std;
 
+//Função principal, aquela que compilará o programa.
 int main(int argc, char* args[])
 {
 	//Declarando Variáveis.
