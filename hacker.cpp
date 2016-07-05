@@ -81,7 +81,7 @@ int main()
 
 			cout << "<HACKEANDO SISTEMA> DIGITE CODIGO [1 ATE 4] " << endl;
 		
-			cout << "<DIGITE PRIMEIRO NUMERO DO CODIGO NO TERMINAL> ";
+			cout << "<DIGITE PRIMEIRO NUMERO DO CODIGO NO TERMINAL> ";													//RECEBE OS NUMEROS DIGITADOS PELO HACKER
 			cin >> codigo;
 			if (codigo == num1) cod1 = true;
 
@@ -90,15 +90,13 @@ int main()
 			if (codigo == num2) cod2 = true;		
 		
 			// ------ REPITA O CÓDIGO ACIMA PARA O TERCEIRO E QUARTO NUMERO QUE PRECISAM SER DIGITADOS ------
-			//Coloque o código aqui!
-			cout<< "<DIGITE TERCEIRO NUMERO DO CODIGO NO TERMINAL ";
+			cout << "<DIGITE TERCEIRO NUMERO DO CODIGO NO TERMINAL> ";
 			cin >> codigo;
 			if (codigo == num3) cod3 = true;
-			
-			cout<< "<DIGITE QUARTO NUMERO DO CODIGO NO TERMINAL ";
+
+			cout << "<DIGITE QUARTO NUMERO DO CODIGO NO TERMINAL> ";
 			cin >> codigo;
 			if (codigo == num4) cod4 = true;
-		
 
 			// ------ FAÇA UM LAÇO DE 0 ATÉ 100, PULANDO DE 10 EM 10, QUE REPITA AS DUAS LINHAS ABAIXO ------
 			//					Sua variável de controle do laço deve se chamar "cont".
@@ -106,34 +104,31 @@ int main()
 			// Dica: "cont++" é a mesma coisa que "cont = cont + 1".
 			// Dica: "cont = cont + 1" aumenta o cont em 1, ou seja, pula de 1 em 1.
 			//		 "cont = cont + 2" aumenta o cont em 2, ou seja, pula de 2 em 2.
-			//Coloque o código aqui!
-			for(cont=0; cont<100; cont = cont +10)
-			{
-			
+			for(cont=0; cont<=100; cont=cont+10){										
 					cout << "<PROCESSANDO CODIGO> AGUARDE " << cont << "%" << endl;
 					system("cls");
+			}	
 		}
-
+		
+		
 		system("cls");
 	}
-	
 
-	// ------ FAÇA UM LAÇO QUE COLOQUE 4 LINHAS EM TELA ------
-    //Coloque o código aqui!
-	int linha1;
-    for (linha1 = 0; linha1 <  4; linha1++)
-    {
-	cout << ("__________________________________________________") << endl;
-	cout << "O codigo foi quebrado. Os arquivos finalmente sao seus." << endl;
-	// ------ FAÇA UM LAÇO QUE COLOQUE 4 LINHAS EM TELA ------
-	 int linha;
-    for (linha = 0; linha < 4; linha++)
-    cout << ("__________________________________________________") << endl;
-	cout << " -------------------- FIM JOGO---------------------" << endl;
-
-	return 0;
+	// ------ FAÇA UM LAÇO QUE COLOQUE 4 LINHAS EM TELA ------					
+	int linha;
+	for(linha = 0; linha<=4; linha++){
+		cout << "___________" << endl;
+		
 	}
-}
+	cout << "O codigo foi quebrado. Os arquivos finalmente sao seus." << endl;      
+	// ------ FAÇA UM LAÇO QUE COLOQUE 4 LINHAS EM TELA ------
+	 	for(linha = 0; linha<=4; linha++){
+		cout << "___________" << endl;
+		
+	cout << " -------------------- FIM DE JOGO ---------------------" << endl;
+
+	}
+	return 0;
 }
 
 /*
@@ -144,13 +139,11 @@ int main()
 */
 void Mostrar_Circuito(bool cod1, bool cod2, bool cod3, bool cod4)
 {
-	// ------ EXPLIQUE O QUE O IF ELSE ABAIXO FAZ NO PROGRAMA ------
-	// Dica: Olhe os outros IF ELSE abaixo. Veja o que muda e tente interpretar.
-	//Coloque o comentário aqui!
-	/*Eles são a declaração do nosso "superpoder" chamado função, que reduz um código enorme como esse abaixo em uma unica linha "invocada" ou melhor dizendo, identificada no inicio do programa, 
+	/*	 ------ EXPLIQUE O QUE O IF ELSE ABAIXO FAZ NO PROGRAMA ------
+		 *Eles são a declaração do nosso "superpoder" chamado função, que reduz um código enorme como esse abaixo em uma unica linha "invocada" ou melhor dizendo, identificada no inicio do programa, 
 	para o primeiro, se a variável cod2 for verdadeira ele executa os couts abaixo, caso contrario inprime outro e assim por diante e assim segue até o final do programa, executando o que vor verdadeiro para ele, assim, exibindo o circuito em 
-	tela para o jogador */
-	
+	tela para o jogador e ascendendo suas luzes quando o valor das variaveis "cod's" forem corretos, assim comcluindo o objetivo do programa.
+	*/
 	if (cod2 == true)
 	{
 		cout << "	       ____	" << endl;
@@ -213,3 +206,7 @@ void Mostrar_Circuito(bool cod1, bool cod2, bool cod3, bool cod4)
 
 	cout << endl << endl;
 }
+/*
+Código por https://github.com/marcelomesmo/POOAulas
+Desenhos ASCII retirados de http://ascii.co.uk/art/pokemon
+*/
