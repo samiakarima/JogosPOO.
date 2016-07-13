@@ -10,6 +10,8 @@ void mostrar_menu();
 void distribuir_atributos(char papel); //Isso ao lado da função, são os chamados parametros da função, os quais enviam uma informação para função.
 void tela_treinamento();
 void tela_atributos();
+int pegar_vida();
+string pegar_estado(int vida);
 
 //Variáveis globais, todos os códigos, incluindo os da função enxergam elas, com elas todos eles entram em "escopo", pois todos enxergam a existencia delas.
 
@@ -17,8 +19,7 @@ int ataque, defesa, vida;
 string estado = "INICIANTE";
 int pontos_extras = 0;
 
-//int pegar_vida();
-//string pegar_estado(int vida);
+
 
 /*
 *	Jogo de RPG onde construímos um personagem Viking.
@@ -77,7 +78,11 @@ int main()
 		mostrar_personagem();
 		
 		// ----- MOSTRA O MENU DE OPÇÕES PARA AÇÔES DO JOGADOR ----- 
-		switch (opcao);
+		int opcao;
+		mostrar_menu();
+		cin >> opcao;
+	
+		switch (opcao)
 		{
 			case 1:
 				tela_treinamento();
@@ -247,7 +252,9 @@ void tela_atributos(){
 				{
 					cout << "Aumentou ATAQUE +2" << endl;
 					ataque += 2;
+					//É o mesmo de se colocar "ataque = ataque+2" e é chamado de incremento.
 					pontos_extras--;
+					//Decremento.
 				}
 				else cout << "Pontos de atributos insuficientes. Pratique mais." << endl;
 			}
@@ -258,9 +265,11 @@ void tela_atributos(){
 					cout << "Aumentou DEFESA +1 e VIDA" << endl;
 					defesa++;
 
-					//vida = pegar_vida();
-					//estado = pegar_estado(vida);
-
+					vida = pegar_vida();
+					estado = pegar_estado(vida);
+				//A funções podem retornar valores.
+				
+	
 					pontos_extras--;
 				}
 				else cout << "Pontos de atributos insuficientes. Pratique mais." << endl;
@@ -271,39 +280,38 @@ void tela_atributos(){
 			system("cls");
 }
 
+	/*
+		defesa++; defesa=defesa+1; e defesa+=1; são iguais, ou seja exercem o mesmo neste código.
 	
+	*/
 	/*
 		Como criar funções?
 		É necessario identificar o código antes da função main, logo após identificar o local onde ela se localizará, e o código dela se encontrará após a função main, acompanhado de "void" assim como no inicio do programa.
 		Com elas é mais simples de coompreender o código, além de que, quando necessario trazer uma função ao "main" não é necessario escrever o código inteiro novemente.
+		Nas funções void vem do ingles vazio, pois as funções que são identificadas por ele não retornam nada.
+		Porém, existem funções que retornam valores, e para isso é necessario ser declarada com os tipos de variaveis especificos, os quais a função retornará após ser executada.
 	
 	*/
 
-/*
+
+
 int pegar_vida()
 {
 	int vida_nova = vida + (defesa * 2);
 	return vida_nova;
+	//Retornar o valor da variável vida_nova, a qual é apenas uma variável temporaria.
 }
-*/
-/*
+
+
 string pegar_estado(int vida)
 {
-	switch (vida)
-	{
-		case 10 ... 15: 
-			return "WEAK";
-		case 16 ... 25:
-			return "NORMAL";
-		case 26 ... 35:
-			return "STRONG";
-		case 35 ... 100:
-			return "SUPER STRONG";
-	}
+
 	if( vida >= 10 && vida <= 15) return "WEAK";
 	else if (vida >= 16 && vida <= 25) return "NORMAL";
 	else if (vida >= 26 && vida <= 35) return "STRONG";
 	else if (vida >= 36) return "SUPER STRONG";
 	else return "INVALID";
 }
-*/
+	/*
+	O switch não trabalha com itervalos de números no C++, portanto é mais simples ultilizarmos if e else.
+	*/
