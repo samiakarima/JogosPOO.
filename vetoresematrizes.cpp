@@ -10,6 +10,7 @@ using namespace std;
 int main () {
 	
 	//Como declarar um vetor?
+	//Adicionando valores estaticamente.
 	int notas[5]= { 100, 80, 60, 40, 20 }; //Cria o vetor "notas" e armazena as notas dentro deste vetor.
 
 	//Como acessar os valores de um vetor?
@@ -28,4 +29,20 @@ int main () {
 	for (int pos=0;  pos<9; pos++) {
 		cout << texto[pos];
 	}
+	
+	//Adicionando valores dinamicamente.
+	int notas2[5];
+	
+	for(int pos=0; pos<5; pos++){
+		
+		cout << "Digite o valor da posicao: " << pos << endl;
+		cin >> notas2[pos];
+		
+	}	
+	
+	for(int pos=0; pos<5; pos++)
+{
+	cout << notas2[pos] << " ";
+
+}
 }	
