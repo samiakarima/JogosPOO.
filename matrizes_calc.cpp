@@ -53,7 +53,7 @@ int main () {
 
  			cout << " " << operacao[linha][coluna] << "    ";
  			
- 			system("pause");
+ 			
  		}
  		cout << endl;
 }
@@ -85,7 +85,7 @@ int main () {
 			operacao[linha][coluna] = matrizA[linha][coluna] - matrizB[linha][coluna];
 
  			cout << " " << operacao[linha][coluna] << "    ";
- 			system ("pause");
+ 		
  		}
  		cout << endl;
 }
@@ -95,6 +95,6 @@ int main () {
 		cout << "Operacao invalida! " << endl;
 		
 		system ("pause");
-	}
+	}		
 		
 }
