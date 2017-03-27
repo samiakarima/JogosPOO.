@@ -134,7 +134,7 @@ int main () {
 	} else if (continuar == 2) {
 			r=false;
 	} else {
-		cout << "Operacao invalida! 
+		cout << "Operacao invalida!" << endl; 
 	}
 }
 }
