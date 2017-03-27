@@ -3,13 +3,40 @@
 using namespace std;
 
 int main () {
+	   
+	int linhas, colunas, opcao, continuar;
+	bool r=true;
 	
-	int linhas, colunas, opcao;
 	
-	cout << "Digite a quatidade de linhas da suas matrizes: " << endl;
+	cout << " ||||    ||||     |||||     |||||||||    ||||||||    |||||||||   ||||||||| " << endl;
+	cout << "  ||\\    /||     ||| |||       |||       |||  |||       |||          ||||" << endl;
+	cout << "  || \\  / ||    |||||||||      |||       ||||||||       |||        |||| " << endl;
+	cout << "  ||  \\/  ||    |||   |||      |||       |||||||        |||       ||||      " << endl;
+	cout << " ||||    ||||  ||||   ||||     |||       |||  ||||   |||||||||   |||||||||         " << endl;
+	cout << endl;
+	cout << "                   ||||||||     |||     |||     ||||||||        " << endl;
+	cout << "                   |||         || ||    |||     |||             "             << endl;
+	cout << "                   |||        |||||||   |||     |||              " << endl;
+	cout << "                   |||       |||   |||  |||     |||                " << endl;
+	cout << "                   |||||||| ||||   |||| ||||||| ||||||||      " << endl;
+	
+	
+	cout << endl;
+	cout << "Ola, este e o MATRIZ CALC, com as imformacoes cedidas por voce,usuario," << endl; 
+	cout << "podemos mostrar-lhe o resultado de qualquer SOMA ou SUBTRACAO de matrizes," << endl;
+	cout << "des que os valores dela sejam valores do tipo INTEIRO." << endl;
+	cout << endl;
+	
+	system ("pause");
+	system("cls");
+	
+	while(r==true) {
+	
+
+	cout << "Digite a quatidade de linhas das suas matrizes: " << endl;
 	cin  >> linhas;
 	
-	cout << "Digite a quatidade de colunas da sua matrizes: " << endl;
+	cout << "Digite a quatidade de colunas das suas matrizes: " << endl;
 	cin  >> colunas;
 	
 	int matrizA[linhas][colunas];
@@ -33,7 +60,7 @@ int main () {
 	for(int linha=0; linha<linhas; linha++) {
 		for(int coluna=0;coluna<colunas; coluna++) {
 			
-			cout << "A[" << linha << "]" << "[" << coluna << "]: ";
+			cout << "A[" << linha+1 << "]" << "[" << coluna+1 << "]: ";
 			cin >> matrizA[linha][coluna];
 	
 }}
@@ -41,7 +68,7 @@ int main () {
 	for(int linha=0; linha<linhas; linha++) {
 		for(int coluna=0;coluna<colunas; coluna++) {
 			
-			cout << "B[" << linha << "]" << "[" << coluna << "]: ";
+			cout << "B[" << linha+1 << "]" << "[" << coluna+1 << "]: ";
 			cin >> matrizB[linha][coluna];
 	
 }}
@@ -66,7 +93,7 @@ int main () {
 		for(int linha=0; linha<linhas; linha++) {
 		for(int coluna=0;coluna<colunas; coluna++) {
 			
-			cout << "A[" << linha << "]" << "[" << coluna << "]: ";
+			cout << "A[" << linha+1 << "]" << "[" << coluna+1 << "]: ";
 			cin >> matrizA[linha][coluna];
 	
 }}
@@ -74,7 +101,7 @@ int main () {
 	for(int linha=0; linha<linhas; linha++) {
 		for(int coluna=0;coluna<colunas; coluna++) {
 			
-			cout << "B[" << linha << "]" << "[" << coluna << "]: ";
+			cout << "B[" << linha+1 << "]" << "[" << coluna+1 << "]: ";
 			cin >> matrizB[linha][coluna];
 	
 }}
@@ -95,6 +122,15 @@ int main () {
 		cout << "Operacao invalida! " << endl;
 		
 		system ("pause");
-	}		
-		
+	}
+	
+	cout << "Deseja continuar? " << endl;
+	cout << " 1 - Sim. " << endl;
+	cout << " 2 - Nao " << endl;
+	cin  >> continuar;
+	
+	if ( continuar == 2) {
+			r=false;
+	}	
+}
 }
