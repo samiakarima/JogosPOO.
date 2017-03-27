@@ -129,8 +129,12 @@ int main () {
 	cout << " 2 - Nao " << endl;
 	cin  >> continuar;
 	
-	if ( continuar == 2) {
+	if ( continuar == 1) {
+			r=true;
+	} else if (continuar == 2) {
 			r=false;
-	}	
+	} else {
+		cout << "Operacao invalida! 
+	}
 }
 }
