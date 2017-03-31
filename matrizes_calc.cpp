@@ -5,7 +5,7 @@ using namespace std;
 int main () {
 	   
 	int linhas, colunas, opcao, continuar;
-	bool r=true;
+	bool r=true, p = true;
 	
 	
 	cout << " ||||    ||||     |||||     |||||||||    ||||||||    |||||||||   |||||||||   " << endl;
@@ -39,11 +39,11 @@ int main () {
 	cout << "Digite a quatidade de colunas das suas matrizes: " << endl;
 	cin  >> colunas;
 	
-	int matrizA[linhas][colunas];
+	float matrizA[linhas][colunas];
 	
-	int matrizB[linhas][colunas];
+	float matrizB[linhas][colunas];
 	
-	int operacao[linhas][colunas];
+	float operacao[linhas][colunas];
 	
 	//Menu principal.
 	cout << "Qual operacao deseja executar? " << endl;
@@ -123,18 +123,23 @@ int main () {
 		
 		system ("pause");
 	}
-	
+	while (p==true){
 	cout << "Deseja continuar? " << endl;
 	cout << " 1 - Sim. " << endl;
 	cout << " 2 - Nao " << endl;
 	cin  >> continuar;
 	
+	
 	if ( continuar == 1) {
 			r=true;
+			p=false;
 	} else if (continuar == 2) {
 			r=false;
+			p=false;
 	} else {
 		cout << "Operacao invalida!" << endl; 
+		system ("pause");
 	}
+}
 }
 }
