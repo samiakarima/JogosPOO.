@@ -24,7 +24,7 @@ int main () {
 	cout << endl;
 	cout << "Ola, este e o MATRIZ CALC, com as imformacoes cedidas por voce,usuario," << endl; 
 	cout << "podemos mostrar-lhe o resultado de qualquer SOMA ou SUBTRACAO de matrizes," << endl;
-	cout << "des que os valores dela sejam valores do tipo INTEIRO." << endl;
+	cout << "des que os valores dela sejam valores do tipo RACIONAL." << endl;
 	cout << endl;
 	
 	system ("pause");
